@@ -1097,4 +1097,10 @@ footer a:hover {
     margin-top: 0em;
   }
 }
+
+@media only screen and (max-height: 600px) {
+  #ScrollIcon {
+    display: none;
+  }
+}
 /*# sourceMappingURL=stylesheet.css.map */
