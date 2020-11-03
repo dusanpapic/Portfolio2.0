@@ -1,0 +1,1094 @@
+@charset "UTF-8";
+/*----------------------------------------- ScrollBars -------------------------------------*/
+::-webkit-scrollbar {
+  width: 1.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 0.5em solid rgba(0, 0, 0, 0);
+  background-color: #353535;
+  background-clip: padding-box;
+  border-radius: 1em;
+}
+
+.Overlay::-webkit-scrollbar-track-piece:start {
+  margin-top: 1.5em;
+}
+
+.Overlay::-webkit-scrollbar-track-piece:end {
+  margin-bottom: 1.5em;
+}
+
+#myBtn {
+  position: fixed;
+  bottom: 2em;
+  right: 1em;
+  background-color: #0099ff;
+  border: none;
+  outline: none;
+  height: 3.5em;
+  width: 3.5em;
+  border-radius: 50%;
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+  opacity: 0;
+}
+
+#myBtn:hover {
+  background-color: #00aaff;
+}
+
+#ToTop {
+  width: 1em;
+  fill: #f9f9f9;
+}
+
+/*----------------------------------------- GlobalStyles -------------------------------------*/
+* {
+  padding: 0em;
+  margin: 0em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  color: #353535;
+}
+
+.Tekst {
+  font-size: 0.9em;
+  line-height: 2em;
+  color: #353535;
+}
+
+.Button {
+  display: inline-block;
+  background-color: #0099ff;
+  color: #f9f9f9;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding: 0.75em 0em;
+  width: 12em;
+  border-radius: 1.5em;
+  -webkit-box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.15);
+          box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.15);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.Button:hover {
+  background-color: #00aaff;
+  -webkit-animation: ButtonAnimation 0.35s;
+          animation: ButtonAnimation 0.35s;
+}
+
+@-webkit-keyframes ButtonAnimation {
+  50% {
+    -webkit-transform: translateY(-0.25em);
+            transform: translateY(-0.25em);
+  }
+}
+
+@keyframes ButtonAnimation {
+  50% {
+    -webkit-transform: translateY(-0.25em);
+            transform: translateY(-0.25em);
+  }
+}
+
+.HomePage {
+  height: 100vh;
+  overflow: hidden;
+  padding: 0em 10em;
+}
+
+nav {
+  -webkit-animation: LoadingAnimation 1s;
+          animation: LoadingAnimation 1s;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 3em;
+}
+
+nav ul li {
+  list-style-type: none;
+  margin-left: 1.5em;
+}
+
+nav ul li a {
+  color: #353535;
+  padding: 0.5em 1em;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  border-bottom: rgba(0, 153, 255, 0) 0.25em solid;
+}
+
+nav ul li a:hover {
+  border-bottom: #0099ff solid;
+  padding-bottom: 0.25em;
+}
+
+.MenuIcon {
+  position: absolute;
+  top: 2.5em;
+  right: 2.5em;
+  display: none;
+}
+
+.Line {
+  height: 0.25em;
+  width: 1.75em;
+  margin: 0.25em;
+  background-color: #353535;
+  border-radius: 1em;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+#Pozdrav {
+  color: #353535;
+  margin-top: 2em;
+  font-size: 3.5em;
+  font-weight: 900;
+  -webkit-animation: LoadingAnimation 0.5s;
+          animation: LoadingAnimation 0.5s;
+}
+
+#Pozdrav::after {
+  content: "|";
+  -webkit-animation: Pozdrav 0.5s infinite;
+          animation: Pozdrav 0.5s infinite;
+}
+
+@-webkit-keyframes Pozdrav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes Pozdrav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#HomeAbout {
+  width: 40em;
+  margin-top: 1em;
+  -webkit-animation: LoadingAnimation 0.5s;
+          animation: LoadingAnimation 0.5s;
+}
+
+#HomeButton {
+  margin-top: 2em;
+  -webkit-animation: LoadingAnimation 0.5s;
+          animation: LoadingAnimation 0.5s;
+}
+
+@-webkit-keyframes LoadingAnimation {
+  0% {
+    -webkit-transform: translateY(-25em);
+            transform: translateY(-25em);
+  }
+}
+
+@keyframes LoadingAnimation {
+  0% {
+    -webkit-transform: translateY(-25em);
+            transform: translateY(-25em);
+  }
+}
+
+#ScrollIcon {
+  width: 1.25em;
+  height: 3em;
+  border: 0.2em solid #353535;
+  border-radius: 1em;
+  margin: 5em auto 0em;
+  -webkit-animation: LoadingAnimation 0.5s;
+          animation: LoadingAnimation 0.5s;
+  cursor: pointer;
+}
+
+#ScrollIconTwo {
+  width: 0.5em;
+  height: 1em;
+  border-radius: 1em;
+  background-color: #353535;
+  margin: 0.25em auto 0em;
+  -webkit-animation: Scroll 3s ease-in-out infinite;
+          animation: Scroll 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes Scroll {
+  50% {
+    margin-top: 1.25em;
+  }
+}
+
+@keyframes Scroll {
+  50% {
+    margin-top: 1.25em;
+  }
+}
+
+/*----------------------------------------- Portfolio -------------------------------------*/
+.Heading {
+  font-size: 3em;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 3em;
+  color: #353535;
+}
+
+.About {
+  text-align: center;
+  width: 50vw;
+  margin: auto;
+  margin-top: 3em;
+}
+
+.CardsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0em 5em;
+  margin-top: 1em;
+}
+
+.Card {
+  margin: 0em 0.5em;
+  padding: 2.5em 0.5em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 1.5em;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.Card:hover {
+  background-color: #f9f9f9;
+}
+
+.CardIcon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2.5em;
+  width: 2.5em;
+  fill: #353535;
+}
+
+.CardHeading {
+  margin: 1.5em 0em 0em;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+  height: 3em;
+  color: #353535;
+}
+
+.CardAbout {
+  text-align: center;
+  margin: auto;
+  height: 8em;
+}
+
+.OverlayButton {
+  display: block;
+  margin: 5em auto 0em;
+  cursor: pointer;
+}
+
+.Process {
+  margin-top: 1em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ProcessOverlay {
+  background-color: white;
+  padding: 5em;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: auto;
+  width: 75vw;
+  border-radius: 1.5em;
+  -webkit-box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.5);
+          box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.5);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.Process:hover + .ProcessOverlay {
+  opacity: 1;
+}
+
+/*----------------------------------------- Overlay -------------------------------------*/
+.Overlay {
+  position: fixed;
+  overflow-y: scroll;
+  bottom: 2em;
+  top: 2em;
+  left: 2em;
+  right: 2em;
+  border-radius: 1.5em;
+  -webkit-box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.15);
+          box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.15);
+  background-color: white;
+  z-index: 100;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.OverlayBackground {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: none;
+}
+
+.Close {
+  position: fixed;
+  top: 3em;
+  right: 3em;
+  padding: 0.75em;
+  width: 2.5em;
+  border-radius: 1.5em;
+  cursor: pointer;
+  fill: #353535;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.Close:hover {
+  background-color: #f9f9f9;
+}
+
+.OverlayHeading {
+  font-size: 3em;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 1em;
+  color: #353535;
+}
+
+.OverlayAbout {
+  text-align: center;
+  padding: 0 5em;
+  margin-top: 1em;
+}
+
+.ProjectContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2em;
+  padding: 0em 5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ProjectContainerExpand {
+  margin-top: 5em;
+  display: none;
+}
+
+.Project {
+  width: 20em;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.Project:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.AboutProject {
+  margin-left: 5em;
+}
+
+.AboutProject a {
+  word-break: break-all;
+}
+
+.ProjectName {
+  font-size: 1.5em;
+  font-weight: 900;
+  margin-bottom: 1em;
+  color: #353535;
+}
+
+.Program {
+  margin-top: 1em;
+}
+
+.ProjectImage {
+  width: 15em;
+  border-radius: 1em;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.ProjectImage:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 100;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.ProjectWebImage {
+  width: 25em;
+  border-radius: 1em;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.ProjectWebImage:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 100;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.Link {
+  color: #0099ff;
+}
+
+.More {
+  text-align: center;
+  cursor: pointer;
+  margin: 1em auto;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  color: #353535;
+}
+
+.More svg {
+  width: 1em;
+  margin-left: 0.5em;
+  fill: #353535;
+}
+
+.Less {
+  display: none;
+  text-align: center;
+  cursor: pointer;
+  margin: 1em auto;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  color: #353535;
+}
+
+.Less svg {
+  width: 1em;
+  margin-left: 0.5em;
+  fill: #353535;
+}
+
+/* -----------------------------------------About */
+.AboutContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3em;
+  padding: 0em 5em;
+}
+
+#AboutImage {
+  display: block;
+  width: 15em;
+  border-radius: 50%;
+  margin-right: 5em;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+#AboutImage:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.15);
+          box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.15);
+}
+
+.Profesija {
+  font-size: 1.5em;
+  font-weight: 900;
+  margin-bottom: 0.5em;
+}
+
+.Profesija::before {
+  content: "GRAFIČKI ";
+  -webkit-animation: Profesija 5s infinite;
+          animation: Profesija 5s infinite;
+  color: #0099ff;
+}
+
+@-webkit-keyframes Profesija {
+  30% {
+    content: "WEB ";
+  }
+  70% {
+    content: "UI/UX ";
+  }
+}
+
+@keyframes Profesija {
+  30% {
+    content: "WEB ";
+  }
+  70% {
+    content: "UI/UX ";
+  }
+}
+
+#AboutButton {
+  margin-top: 2em;
+}
+
+/* -----------------------------------------Contact */
+.ContactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 3em;
+  padding: 0em 10em;
+}
+
+.ContactInfo {
+  line-height: 3em;
+  fill: #353535;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.ContactInfo:hover {
+  color: #0099ff;
+  fill: #00aaff;
+}
+
+.ContactIcon {
+  width: 1.6em;
+  -webkit-transform: translateY(0.35em);
+          transform: translateY(0.35em);
+  margin-right: 1.25em;
+}
+
+input {
+  margin: 0em 1em 1em 0em;
+  padding: 1em;
+  border: none;
+  border-radius: 2em;
+  width: 30vw;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+input:hover {
+  -webkit-box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.15);
+          box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.15);
+}
+
+textarea {
+  margin-right: 1em;
+  padding: 1em;
+  border: none;
+  border-radius: 2em;
+  width: 30vw;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  resize: none;
+  background-color: #f9f9f9;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+textarea:hover {
+  -webkit-box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.15);
+          box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.15);
+}
+
+.MessageMe span {
+  line-height: 5em;
+  vertical-align: top;
+  font-size: 0.75em;
+  color: #353535;
+}
+
+#Submit {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  width: 12em;
+  border: none;
+  cursor: pointer;
+  margin-top: 1em;
+  margin-bottom: 0em;
+}
+
+::-webkit-input-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+:-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+/* -----------------------------------------Footer */
+footer {
+  background-color: #353535;
+  margin-top: 10em;
+  padding: 5em;
+  text-align: center;
+}
+
+.FooterText {
+  color: #f9f9f9;
+  font-weight: 300;
+}
+
+#FooterAbout {
+  margin: 2.5em auto;
+  width: auto;
+}
+
+#FooterNav {
+  margin-bottom: 1em;
+}
+
+footer a {
+  margin: 0em 1.5em;
+  padding: 0.5em 1em;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  border-bottom: rgba(0, 153, 255, 0) 0.25em solid;
+}
+
+footer a:hover {
+  border-bottom: #0099ff solid;
+  padding-bottom: 0.25em;
+}
+
+@media only screen and (max-width: 1080px) {
+  .HomePage {
+    padding: 0em 5em;
+  }
+  .About {
+    width: auto;
+    padding: 0em 5em;
+  }
+  .CardsContainer {
+    padding: 0em 2.5em;
+  }
+  .ProjectContainer {
+    padding: 0em 2.5em;
+  }
+  .AboutProject {
+    margin-left: 2.5em;
+  }
+  .ContactContainer {
+    padding: 0em 5em;
+  }
+  #FooterAbout {
+    margin: 2.5em auto;
+    width: auto;
+  }
+  .OverlayAbout {
+    padding: 0 2.5em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .HomePage {
+    padding: 0em 2.5em;
+  }
+  .CardsContainer {
+    padding: 0em;
+  }
+  .Overlay {
+    bottom: 1em;
+    top: 1em;
+    left: 1em;
+    right: 1em;
+  }
+  .AboutContainer {
+    padding: 0em 2.5em;
+  }
+  .Card {
+    margin: 0;
+  }
+  .ContactContainer {
+    padding: 0em 2.5em;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .CardsContainer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0em 5em;
+  }
+  .Card {
+    margin: 0em 1.25em;
+  }
+  .OverlayButton {
+    margin-top: 2.5em;
+  }
+  .AboutContainer {
+    padding: 0em 1em;
+  }
+  #myBtn {
+    display: none;
+  }
+  #ScrollIcon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .ProjectContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .AboutProject {
+    margin-left: 0em;
+    margin-top: 2.5em;
+    text-align: center;
+  }
+  .ProjectImage {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    padding: 0em 1em;
+    border-radius: 0em;
+  }
+  .ProjectWebImage {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-radius: 0em;
+  }
+  .AboutContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0em;
+  }
+  #AboutImage {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5em;
+  }
+  .AboutInfo {
+    text-align: center;
+    padding: 0em 5em;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    -webkit-animation: none;
+            animation: none;
+  }
+  nav ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 5em 0;
+    text-align: center;
+    background-color: #0099ff;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    z-index: 100;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  nav ul li {
+    margin: 0;
+    padding: 1em 0em;
+  }
+  nav ul li a {
+    color: #353535;
+    font-size: 2em;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 0;
+    -webkit-transition: 0s;
+    transition: 0s;
+    border-bottom: none;
+  }
+  nav ul li a:hover {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .MenuIcon {
+    display: block;
+    z-index: 100;
+    cursor: pointer;
+    fill: #353535;
+  }
+  .nav-active {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  .toggle .Line1 {
+    -webkit-transform: rotate(45deg) translate(0em, 0.7em);
+            transform: rotate(45deg) translate(0em, 0.7em);
+  }
+  .toggle .Line2 {
+    opacity: 0;
+  }
+  .toggle .Line3 {
+    -webkit-transform: rotate(-45deg) translate(0em, -0.7em);
+            transform: rotate(-45deg) translate(0em, -0.7em);
+  }
+  .Close {
+    top: 1em;
+    right: 1em;
+  }
+  .Process {
+    display: none;
+  }
+  .Card {
+    margin: 0.5em;
+  }
+  footer {
+    padding: 5em 2.5em;
+  }
+  form span {
+    display: none;
+  }
+  input {
+    width: 20em;
+  }
+  textarea {
+    width: 20em;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .HomePage {
+    text-align: center;
+  }
+  #Pozdrav {
+    font-size: 2.5em;
+    padding-top: 1em;
+  }
+  #HomeAbout {
+    width: auto;
+    padding: 0em 2.5em;
+  }
+  .Heading {
+    font-size: 2.5em;
+  }
+  .About {
+    padding: 0em 2.5em;
+  }
+  .OverlayHeading {
+    font-size: 2.5em;
+  }
+  .OverlayAbout {
+    padding: 0em 2.5em;
+  }
+  .CardsContainer {
+    padding: 0em 2.5em;
+  }
+  .AboutInfo {
+    padding: 0em 2.5em;
+  }
+  .ContactContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  input {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+  }
+  .ContactMe {
+    margin-top: 2.5em;
+  }
+  .MessageMe {
+    text-align: center;
+  }
+  footer a {
+    margin: 0em 0.5em;
+    padding: 0.5em 1em;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .Card {
+    margin: 0em 1em;
+  }
+  footer a {
+    margin: 0em 0.25em;
+    padding: 0.5em 1em;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #HomeAbout {
+    padding: 0em 1em;
+  }
+  .HomePage {
+    padding: 0em;
+  }
+  .Heading {
+    margin-top: 1em;
+  }
+  .About {
+    padding: 0em 1em;
+  }
+  .CardsContainer {
+    padding: 0em 1em;
+  }
+  .Card {
+    margin: 2.5em 0.75em;
+    padding: 0em;
+  }
+  .Card:hover {
+    background-color: white;
+  }
+  .ProjectContainer {
+    padding: 0em 1em;
+  }
+  .OverlayButton {
+    margin-top: 0em;
+  }
+  .Overlay {
+    padding: 0em;
+  }
+  .OverlayAbout {
+    padding: 0em 1em;
+  }
+  .OverlayHeading {
+    margin-top: 1.5em;
+  }
+  #AboutImage:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .AboutInfo {
+    padding: 1em;
+  }
+  .ContactContainer {
+    padding: 0em 1em;
+  }
+  footer {
+    padding: 5em 1em;
+  }
+  footer a {
+    margin: 0em;
+    padding: 0.25em 0em;
+    display: block;
+  }
+  .ProjectImage,
+  .ProjectWebImage,
+  .Project {
+    width: 85vw;
+  }
+  .ProjectImage:hover,
+  .ProjectWebImage:hover,
+  .Project:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .Close:hover {
+    background-color: white;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .Card {
+    margin: 2.5em 0em;
+    padding: 0em;
+  }
+}
+/*# sourceMappingURL=stylesheet.css.map */
