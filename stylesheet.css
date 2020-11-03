@@ -1092,9 +1092,12 @@ footer a:hover {
   }
 }
 
-@media only screen and (max-height: 400px) {
+@media only screen and (max-height: 350px) {
   .Process {
     display: none;
+  }
+  #Pozdrav {
+    margin-top: 0em;
   }
 }
 /*# sourceMappingURL=stylesheet.css.map */
