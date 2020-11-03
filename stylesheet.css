@@ -1091,4 +1091,10 @@ footer a:hover {
     padding: 0em;
   }
 }
+
+@media only screen and (max-height: 400px) {
+  .Process {
+    display: none;
+  }
+}
 /*# sourceMappingURL=stylesheet.css.map */
