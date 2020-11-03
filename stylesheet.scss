@@ -882,7 +882,7 @@ footer a:hover {
 }
 // // --------------------------------------------------------------------------------------------
 // // //---------------------------------------max-height: 400px
-@media only screen and (max-width: 525px) {
+@media only screen and (max-height: 400px) {
   .Process {
     display: none;
   }
