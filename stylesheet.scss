@@ -81,6 +81,9 @@ a {
   height: 100vh;
   overflow: hidden;
   padding: 0em 10em;
+  background-image: url("Images/Portfolio\ Landing\ Page\ 3.0.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 nav {
   animation: LoadingAnimation 1s;
@@ -541,6 +544,7 @@ footer a:hover {
 @media only screen and (max-width: 1080px) {
   .HomePage {
     padding: 0em 5em;
+    background-position-y: 2.5em;
   }
   .About {
     width: auto;
