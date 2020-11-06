@@ -544,7 +544,7 @@ footer a:hover {
 @media only screen and (max-width: 1080px) {
   .HomePage {
     padding: 0em 5em;
-    background-position-y: 2.5em;
+    background-position-x: -5em;
   }
   .About {
     width: auto;
@@ -894,5 +894,8 @@ footer a:hover {
 @media only screen and (max-height: 600px) {
   #ScrollIcon {
     display: none;
+  }
+  .HomePage {
+    background-image: none;
   }
 }
