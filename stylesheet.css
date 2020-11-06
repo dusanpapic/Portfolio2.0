@@ -561,8 +561,6 @@ nav ul li a:hover {
 #AboutImage:hover {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
-  -webkit-box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.15);
-          box-shadow: 0.15em 0.15em 0.25em rgba(53, 53, 53, 0.15);
 }
 
 .Profesija {
