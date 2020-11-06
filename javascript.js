@@ -25,7 +25,7 @@ function topFunction() {
 //------------------------------------Pozdrav
 const texts = [
   "   ",
-  "Pozdrav!   ",
+  "Ćao! Ćao!   ",
   "   ",
   "Ja sam...   ",
   "   ",
